@@ -1,0 +1,34 @@
+<header>
+    
+</header>
+<div class="container responsive-grid">
+  <mat-card *ngFor="let personaje of results.results" class="card">
+    <mat-card-header>
+      <mat-card-title>{{ personaje.name }} </mat-card-title>
+    </mat-card-header>
+    <br />
+    <img mat-card-image [src]="personaje.image" />
+    <mat-card-content class="content">
+      <br />
+      <p>
+        {{ personaje.status }} - {{ personaje.species }}
+      </p>
+      <p>
+        {{ personaje.id }}
+      </p>
+      <p>
+        {{ personaje.gender }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+
+<!-- <table>
+    <tr *ngFor="let personaje of results.results">
+        <td>{{personaje.id}}</td>
+        <td>{{personaje.name}}</td>
+        <td><img class="foto" [src]="personaje.image"></td>
+    </tr>
+</table> -->

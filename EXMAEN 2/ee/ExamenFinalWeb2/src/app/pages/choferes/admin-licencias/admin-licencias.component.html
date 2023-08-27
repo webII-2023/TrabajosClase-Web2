@@ -1,0 +1,39 @@
+<p style="color:aliceblue; font-size: 20px; text-align: center; margin-top: 20px;margin-bottom: 20px;">Agregar licencias</p>
+
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- id Column -->
+    <ng-container matColumnDef="id">
+      <th style="text-align: center;" mat-header-cell *matHeaderCellDef>Licencia ID</th>
+      <td  style="text-align: center;" mat-cell *matCellDef="let element">{{ element.id }}</td>
+    </ng-container>
+  
+    <!-- nombre Column -->
+    <ng-container matColumnDef="nombre">
+      <th  style="text-align: center;" mat-header-cell *matHeaderCellDef>Tipo de licencia</th>
+      <td  style="text-align: center;" mat-cell *matCellDef="let element">{{ element.nombre }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="acciones">
+        <th  style="text-align: center;" mat-header-cell *matHeaderCellDef>Acciones</th>
+        <td mat-cell *matCellDef="let element">
+            <div style="display: flex; justify-content: center;">
+              <button (click)="seleccionarLicencia(element)" style="margin: 10px auto; width: 100%; height: 40px;" mat-flat-button color="primary">Agregar licencias</button>
+            </div>
+      </ng-container>
+
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4" style="color: aliceblue;">
+          No se encontro ningun resultado "{{ input.value }}"
+        </td>
+      </tr>
+  
+    <!-- Las siguientes líneas generan las filas utilizando *ngFor -->
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+  </table><mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input />
+</mat-form-field>

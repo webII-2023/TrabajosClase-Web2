@@ -1,0 +1,46 @@
+.example-card {
+    max-width: 500px;
+  }
+  mat-form-field{
+    display: block;
+    margin: 5px;
+    }
+  .titulo{
+    text-align: center;
+    margin:25px;
+    font-size: 2em;
+    color: white
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px; /* Opcional: Agrega margen superior si deseas */
+    }
+    
+    .button-container button {
+      margin: 0 10px; /* Espaciado horizontal entre los botones */
+    }
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 105vh; /* Centra verticalmente en la pantalla */
+    }
+    
+    .example-card {
+      width: 450px; /* Ajusta el ancho de la tarjeta según tus necesidades */
+    }
+
+    .toast-success {
+      background-color: #4caf50; /* Color de fondo verde */
+      color: #fff; /* Color del texto blanco */
+      font-size: 16px; /* Tamaño de fuente */
+      border-radius: 8px; /* Borde redondeado */
+      border: none; /* Sin borde */
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    }
+    
+    
+    
+    
+    

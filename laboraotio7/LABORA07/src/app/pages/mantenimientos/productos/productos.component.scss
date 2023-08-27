@@ -1,0 +1,38 @@
+.btnAgregar {
+  border: 2px solid purple;
+  text-align: center;
+  padding: 5px 50px;
+  font-size: 16px;
+  margin: 5% auto; /* Margen vertical del 5% y centrado horizontal */
+  display: block; 
+  border-radius: 20px;
+}
+
+
+.btnAgregar:hover {
+  background-color: purple;
+  color: white;
+}
+
+
+table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 15px;
+    width: 100%;
+  }
+  .btnAccion {
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 16px;
+    border-radius: 20px;
+  }
+  .btnAccion:hover {
+    background-color: purple;
+    color: white;
+  }
+  
+
+ 

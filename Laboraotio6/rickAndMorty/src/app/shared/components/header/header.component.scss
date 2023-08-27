@@ -1,0 +1,17 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+a{
+  margin-left: 40px;
+  text-decoration: none;
+  border: 1px solid black;
+  background: black;
+  padding: 10px;
+  color: white;
+  border-radius: 6px;
+}
+
+a:hover{
+  background: grey;
+  color: white;
+}

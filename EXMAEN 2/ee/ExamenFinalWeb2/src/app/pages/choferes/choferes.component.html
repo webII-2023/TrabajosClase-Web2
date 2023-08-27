@@ -1,0 +1,111 @@
+<div class="center-container">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title
+        class="titulo"
+        style="color: aliceblue; text-align: center"
+        >Añadir choferes</mat-card-title
+      >
+    </mat-card-header>
+      <!-- Formulario para agregar choferes -->
+
+    <mat-card-content>
+      <form [formGroup]="choferesForm.baseForm">
+        <mat-form-field>
+          <mat-label>Cedula</mat-label>
+          <input style="width: 50%" matInput formControlName="cedula" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Nombre</mat-label>
+          <input style="width: 50%" matInput formControlName="nombre" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Apellido1</mat-label>
+          <input style="width: 50%" matInput formControlName="apellido1" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Apellido 2</mat-label>
+          <input style="width: 50%" matInput formControlName="apellido1" />
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Fecha Ingreso</mat-label>
+          <input type="date" matInput formControlName="fechaNah" />
+        </mat-form-field>
+      </form>
+      <!-- Botón '+' para abrir el diálogo de licencias -->
+
+      <button
+        (click)="abrirDialog()"
+        style="margin-bottom: 10px; width: 40px; height: 40px; float: right"
+        mat-flat-button
+        color="primary"
+      >
+        +
+      </button>
+      <!-- Tabla para mostrar las licencias seleccionadas -->
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- id Column -->
+        <ng-container matColumnDef="id">
+          <th style="text-align: center" mat-header-cell *matHeaderCellDef>
+            Licencia ID
+          </th>
+          <td style="text-align: center" mat-cell *matCellDef="let licencia">
+            {{ licencia.id }}
+          </td>
+        </ng-container>
+        <!-- nombre Column -->
+        <ng-container matColumnDef="nombre">
+          <th style="text-align: center" mat-header-cell *matHeaderCellDef>
+            Tipo de licencia
+          </th>
+          <td style="text-align: center" mat-cell *matCellDef="let licencia">
+            {{ licencia.nombre }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="acciones">
+          <th style="text-align: center;" mat-header-cell *matHeaderCellDef>Acciones</th>
+          <td mat-cell *matCellDef="let licencia">
+            <div style="display: flex; justify-content: center;">
+              <button
+                (click)="eliminarLicencia(licencia)"
+                style="margin: 10px auto; width: 100%; height: 40px;"
+                mat-flat-button
+                color="warn"
+              >
+                Eliminar
+              </button>
+            </div>
+          </td>
+        </ng-container>
+  
+
+        <tr mat-header-row *matHeaderRowDef="['id', 'nombre','acciones']"></tr>
+        <tr
+          mat-row
+          *matRowDef="
+            let licencia of licenciasSeleccionadas;
+            columns: ['id', 'nombre','acciones']
+          "
+        ></tr>
+      </table>
+      <!-- Botón para guardar el chofer -->
+
+      <br />
+      <button
+        (click)="guardar()"
+        style="width: 100%; height: 40px"
+        mat-flat-button
+        color="primary"
+      >
+        Guardar chofer
+      </button>
+    </mat-card-content>
+    <mat-card-actions> </mat-card-actions>
+  </mat-card>
+</div>

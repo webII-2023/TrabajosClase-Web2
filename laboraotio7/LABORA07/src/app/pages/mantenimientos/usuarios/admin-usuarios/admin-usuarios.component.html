@@ -1,0 +1,48 @@
+<h1 class="titulo">{{titulo}}</h1>
+ <form [formGroup] = "usuarioForm.baseForm">
+<div class="container">
+    <mat-form-field>
+        <mat-label>cedula</mat-label>
+        <input matInput formControlName= "cedula" [readonly]="!isCreate">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>nombre</mat-label>
+        <input matInput formControlName= "nombre">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>apellido1</mat-label>
+        <input matInput formControlName= "apellido1">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>apellido2</mat-label>
+        <input matInput formControlName= "apellido2">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>fecha_ingreso</mat-label>
+        <input type="date" matInput formControlName= "fecha_ingreso">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>correo</mat-label>
+        <input matInput formControlName= "correo">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>rol</mat-label>
+        <input matInput formControlName= "rol">
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>contrasena</mat-label>
+        <input matInput formControlName= "contrasena">
+    </mat-form-field>
+</div>
+ </form>
+
+<div>
+    <button class="btnGuardar" mat-button color="primary" (click)="guardar()">Guardar</button>
+  </div>

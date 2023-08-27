@@ -1,0 +1,37 @@
+.example-card {
+    max-width: 500px;
+  }
+  mat-form-field{
+    display: block;
+    margin: 5px;
+    }
+  .titulo{
+    text-align: center;
+    margin:25px;
+    font-size: 2em;
+    color: white
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px; /* Opcional: Agrega margen superior si deseas */
+    }
+    
+    .button-container button {
+      margin: 0 10px; /* Espaciado horizontal entre los botones */
+    }
+    .center-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 105vh; /* Centra verticalmente en la pantalla */
+    }
+    
+    .example-card {
+      width: 450px; /* Ajusta el ancho de la tarjeta según tus necesidades */
+    }
+    
+    
+    
+    
+    
